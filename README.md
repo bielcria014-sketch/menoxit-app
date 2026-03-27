@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MENOXIT PRO</title>
+
+<style>
+body {
+    margin: 0;
+    background: #000;
+    font-family: Arial;
+    color: white;
+}
+
+/* Splash fake */
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: red;
+    font-size: 20px;
+}
+
+/* topo */
+.topo {
+    background: red;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 0 20px red;
+}
+
+/* container */
+.container {
+    padding: 15px;
+}
+
+/* card */
+.card {
+    background: #0a0a0a;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px red;
+}
+
+/* item */
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+/* switch */
+.switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    background: #222;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    top: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background: red;
+    box-shadow: 0 0 10px red;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+/* botão */
+.botao {
+    width: 100%;
+    padding: 15px;
+    background: red;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 15px red;
+}
+
+/* select */
+select {
+    width: 100%;
+    padding: 8px;
+    background: black;
+    color: white;
+    border: 1px solid red;
+    border-radius: 6px;
+}
+
+/* range */
+.range {
+    width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loading">
+⚡ INJETANDO CONFIG... ⚡
+<br>
+Abrindo Free Fire...
+</div>
+
+<div class="topo">
+PRODUÇÃO MENOXIT ⚡
+</div>
+
+<div class="container">
+
+<div class="card">
+<h3>AIM CONFIG</h3>
+
+<div class="item">Aim Bot
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="item">Aim Lock
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="item">Aim FOV
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<label>FOV (0-100)</label>
+<input type="range" class="range">
+
+<label>Linha Aim</label>
+<select>
+<option>Normal</option>
+<option>Reta</option>
+<option>Curva</option>
+</select>
+
+<label>Selecionar Jogo</label>
+<select>
+<option>Free Fire Normal</option>
+<option>Free Fire MAX</option>
+</select>
+
+</div>
+
+<div class="card">
+<h3>VISUAL</h3>
+
+<div class="item">ESP
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="item">Full Vermelho HS
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="item">Pescoço
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+</div>
+
+<div class="card">
+<h3>EXTRAS</h3>
+
+<div class="item">No Recoil
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="item">I'm Bot
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="item">Anti Blacklist
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="item">Anti Ban
+<label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+</div>
+
+<button class="botao" onclick="ativar()">ATIVAR CONFIG</button>
+
+</div>
+
+<script>
+function ativar(){
+    document.getElementById("loading").style.display = "flex";
+
+    setTimeout(()=>{
+        alert("CONFIG ATIVADA ⚡ (visual)");
+        document.getElementById("loading").style.display = "none";
+    }, 3000);
+}
+</script>
+
+</body>
+</html>
